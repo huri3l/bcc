@@ -70,7 +70,7 @@ vector<int> gera_vetor(int tamanho) {
     return V;
 }
 
-// Bubble sort comum com la�o duplo
+// Bubble sort comum com laço duplo
 vector<int> ordena(vector<int> A, int n) {
     int aux;
     for (int i = 0; i < n; i++) {
