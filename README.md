@@ -1,3 +1,4 @@
-# O que é esse repositório
-O objetivo desse repositório é armazenar as anotações que farei em aula a respeito de matérias do curso de Ciências da Computação usando Markdown. 
-Dessa forma, consigo fazer anotações sobre conteúdos relevantes da aula e deixar essas anotações salvas nesse repositório.
+# BCC - Bacharelado em Ciências da Computação
+O objetivo desse repositório é de organizar meus estudos no curso de Ciências da Computação do IFSUL.  
+Através desse repositório, pretendo deixar salvo códigos, anotações e diversos materiais que usei durante a minha formação.  
+Alguns conteúdos não estarão presentes nesse repositório porque utilizo muito o Google Drive para salvar algumas coisas.
