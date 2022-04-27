@@ -68,4 +68,4 @@ vector<int> ordena(vector<int> A, int n) {
   return A;
 }
 ```
-O código completo se encontra em: [ex01-ordenacao_bubble_sort](./ex01-ordenacao_bubble_sort.cpp)  
+O código completo se encontra em: [ex01-ordenacao_bubble_sort](./ex01-ordenacao_bubble_sort.cpp)
