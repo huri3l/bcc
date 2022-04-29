@@ -10,7 +10,6 @@ As monothreads são problemáticas por consumirem muito recurso, além de limita
 * O escalonador pode decidir dar mais tempo de CPU a um processo com grande número de threads;
 * É bom para aplicativos que bloqueiam com frequência.  
 
-
 Entretanto, existem desvantagens também:
 * O Kernel é sobrecarregado e existe um aumento na complexidade do Kernel;
 * As threads de Kernel são lentas e ineficientes se comparadas às threads de usuário, em centenas de vezes.
