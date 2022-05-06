@@ -1,36 +1,50 @@
 #include <iostream>
 #include <vector>
+#include <fstream>
+#include <chrono>
 
 using namespace std;
 
 void quickSort(int ini, int fim);
 int ordenaEParticiona(int p, int r);
+vector<int> geraVetor();
 
 vector<int> vetor;
 
 int main() {
     setlocale(LC_ALL, "Portuguese");
+    vetor = geraVetor();
 
-    // vetor = geraVetor();
+    // Variáveis para análise de tempo de execução dos algoritmos
+    auto start_time = chrono::high_resolution_clock::now();
+    auto end_time = chrono::high_resolution_clock::now();
+    auto int_ms = chrono::duration_cast<chrono::milliseconds>(end_time - start_time);
+    chrono::duration<double, std::milli> float_ms = end_time - start_time;
 
-    vetor.push_back(7);
-    vetor.push_back(3);
-    vetor.push_back(1);
-    vetor.push_back(5);
-    vetor.push_back(3);
+    start_time = chrono::high_resolution_clock::now();
+    quickSort(0, vetor.size() - 1);
+    end_time = chrono::high_resolution_clock::now();
+    float_ms = end_time - start_time;
+    int_ms = chrono::duration_cast<chrono::milliseconds>(end_time - start_time);
 
-    cout << "Vetor antes da ordenação: \n";
-    for(int i = 0; i < vetor.size(); i++) {
-        cout << vetor[i] << "\n";
+    cout << "Tempo de execução da função 'quickSort()': " << float_ms.count() << " ms "
+        << "( " << int_ms.count() << " milliseconds )" << endl << endl;
+
+}
+
+vector<int> geraVetor() {
+    string linha;
+    int num;
+    vector<int> vetor;
+
+    ifstream arquivo ("arqCemMil.txt");
+    if(arquivo.is_open()) {
+        while(arquivo >> num) {
+            vetor.push_back(num);
+        }
     }
 
-    quickSort(vetor[0], vetor.back());
-
-    cout << "Vetor depois da ordenação: \n";
-    for(int i = 0; i < vetor.size(); i++) {
-        cout << vetor[i] << "\n";
-    }
-
+    return vetor;
 }
 
 void quickSort(int ini, int fim) {
