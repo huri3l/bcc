@@ -1,4 +1,4 @@
-# Aula 05.05 - 
+# Aula 05.05 - Autômatos Finitos: Conceitos
 ## Definições
 São a base para o desenvolvimento de teoremas. Descrevem os objetos e conceitos a serem considerados (modelos).  
 Podem ser:
