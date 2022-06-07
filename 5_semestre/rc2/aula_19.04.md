@@ -48,16 +48,13 @@ subnet 192.168.10.0 netmask 255.255.255.0 {
   option routers 192.168.10.254;
   option domain-name-servers 192.168.10.254, 192.168.10.253;
   option broadcast-address 192.168.10.255;  
-}
+} 
 
-# Nome do host que irá recer o IP. Não é necessário adicionar o mesmo nome (hostname) do 
-cliente 
-host cliente1 { 
-  # Endereço MAC do cliente que irá receber o IP 
-  hardware ethernet 08:00:27:ed:f9:f5; 
-  
-  # IP que o cliente irá receber 
-  fixed-address 192.168.10.222; 
+host cliente1 {
+  # Endereço AMC do cliente que irá receber o IP
+  hardware ethernet ;
+  # IP que o cliente irá receber
+  fixed-address ;
 }
 ```  
 Executar o seguinte comando no terminal: service isc-dhcp-server restart (Talvez seja necessário restartar, e então é só usar o comando: reboot)
